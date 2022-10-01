@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="load()">
+    <div class="wrapper">
+        <!-- <div class="static-text">I'm a</div> -->
+        <ul id="wordList" class="dynamic-text"></ul>
+    </div >
+    <a href="index2.html"><button>Next</button></a>
+</body>
+
+</html>
+
+<script>
+    window.onload = function load(){
+        let arr = ["Hi Hi", "My name is Mayowa", "I'm a Developer", "Specifically Frontend"]
+        let wordList = document.getElementById("wordList")
+        for(i = 0; i < arr.length; i++){
+            var c = arr[0];
+            let li = document.createElement("li")
+            let span = document.createElement("span")
+            li.appendChild(span)
+            span.innerHTML = arr[i];
+            wordList.appendChild(li)
+            console.log(wordList.appendChild(li))
+        }
+    }
+</script>

@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: black;
+
+}
+
+.wrapper{
+    display: inline-flex;
+}
+
+.wrapper .static-text{
+    color: white;
+    position: relative;
+    font-size: 60px;
+    top: 8px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-text{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* margin-left: 15px; */
+    height: 90px;
+    line-height: 90px;
+    /* background: red;*/
+    overflow: hidden;
+}
+
+.dynamic-text li{
+    color: grey;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 8s steps(4) infinite;
+    /*animation: hide 8s steps(4) infinite;*/
+
+}
+
+
+@keyframes hide{
+    100%{
+        display: none;
+    }
+}
+
+
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+
+
+
+
+li span{
+    position: relative;
+} 
+
+li span::after{
+    content: "";
+    position: absolute;
+    left: 0; 
+    height: 120%;
+    width: 100%;
+    background: #000;
+    border-left: 2px solid white;
+    animation: typing 2s steps(21) infinite;
+}
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+
+button{
+    border-radius: 10px;
+    background-color: silver;
+    color: black;
+    padding: 15px 15px 15px 15px;
+    position: relative;
+    top: 150px;
+    /* right: 350px; */
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    cursor: pointer;
+}
+
+
